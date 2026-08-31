@@ -1,0 +1,10 @@
+import { chromium } from 'playwright-core';
+const B='http://localhost:4183', out='C:/Users/HITART~1/AppData/Local/Temp/claude/d--Royal-Decor/9098f617-c8ec-4ccd-868b-046b64fffa73/scratchpad';
+const b=await chromium.launch({channel:'msedge'});
+const c=await b.newContext({viewport:{width:1440,height:900},deviceScaleFactor:3});
+const p=await c.newPage();
+await p.goto(B+'/',{waitUntil:'networkidle'}); await p.waitForTimeout(1500);
+await p.locator('header a[aria-label*="home"]').first().screenshot({path:`${out}/L2-nav.png`});
+await b.close();
+const c2=await (await chromium.launch({channel:'msedge'})).newContext({viewport:{width:1440,height:900}});
+console.log('done');

@@ -1,0 +1,735 @@
+/**
+ * ------------------------------------------------------------------
+ *  PRODUCT CATALOGUE — the only place product information lives.
+ *  Add, remove or edit entries here; every page updates automatically.
+ *
+ *  Built around Royal Decor's actual product lines (curtains, blinds,
+ *  wallpapers, flooring, bedding and soft furnishings) and illustrated
+ *  with the showroom's own photographs.
+ *
+ *  NOTE ON PRICING: almost everything here is made to measure, so
+ *  `price` is left null and the card shows "Request Price". Fill in a
+ *  real number — or a starting price — where you have one, and the
+ *  price filter and sorting switch themselves on automatically.
+ * ------------------------------------------------------------------
+ */
+
+export const products = [
+  {
+    id: 1,
+    slug: 'pleated-blackout-curtains',
+    name: 'Pleated Blackout Curtains',
+    category: 'Curtains',
+    collection: 'Made to Measure',
+    price: null,
+    productCode: 'CT-001',
+    shortDescription: 'Heavy pleated drapes that block light and soften a room.',
+    description:
+      'Full-length pinch-pleat curtains in a heavy weave, lined for blackout. Made to the exact drop of your window and hung on a concealed track or a visible rod, whichever suits the room. Bring your measurements, or we will come and take them.',
+    images: [
+      '/images/products/curtains-pleated.webp',
+      '/images/showroom/curtain-display.webp',
+      '/images/rooms/living-curtains.webp',
+    ],
+    material: 'Heavy polyester-cotton weave, blackout lining',
+    dimensions: 'Made to measure — any width and drop',
+    colors: ['Beige', 'Rust', 'Charcoal', 'Wine'],
+    availability: 'Made to Order',
+    featured: true,
+    newArrival: false,
+    year: 2026,
+  },
+  {
+    id: 2,
+    slug: 'sheer-day-curtains',
+    name: 'Sheer Day Curtains',
+    category: 'Curtains',
+    collection: 'Made to Measure',
+    price: null,
+    productCode: 'CT-002',
+    shortDescription: 'Light filtering sheers, usually layered behind a heavier drape.',
+    description:
+      'Sheers keep daylight and privacy at the same time. Most rooms take them as the inner layer behind a blackout curtain on a double track, so you can have the room bright and private through the day and dark at night.',
+    images: [
+      '/images/products/curtains-sheer.webp',
+      '/images/products/curtains-teal.webp',
+      '/images/showroom/curtain-racks.webp',
+    ],
+    material: 'Polyester voile and linen-look sheer',
+    dimensions: 'Made to measure — any width and drop',
+    colors: ['Ivory', 'Oat', 'Silver', 'Blush'],
+    availability: 'Made to Order',
+    featured: true,
+    newArrival: false,
+    year: 2026,
+  },
+  {
+    id: 3,
+    slug: 'roller-blinds',
+    name: 'Roller & Zebra Blinds',
+    category: 'Blinds',
+    collection: 'Window Blinds',
+    price: null,
+    productCode: 'BL-001',
+    shortDescription: 'Motorized and chain-operated roller and zebra blinds with designer prints.',
+    description:
+      'Clean, versatile window coverings available in motorized, sunscreen, blackout, and custom digital printed options (including themed architectural and artwork prints).',
+    images: [
+      '/images/products/blinds-roller.webp',
+      '/images/showroom/fabric-rail.webp',
+      '/images/showroom/wallpaper-rolls.webp',
+    ],
+    material: 'Sunscreen, blackout and printed polyester fabric',
+    dimensions: 'Made to measure — any width and drop',
+    colors: ['White', 'Grey', 'Beige', 'Printed Art'],
+    availability: 'Made to Order',
+    featured: true,
+    newArrival: false,
+    year: 2026,
+  },
+  {
+    id: 4,
+    slug: 'roman-blinds',
+    name: 'Roman Blinds',
+    category: 'Blinds',
+    collection: 'Window Blinds',
+    price: null,
+    productCode: 'BL-002',
+    shortDescription: 'Fabric blinds that fold into soft horizontal pleats.',
+    description:
+      'A roman blind gives you the softness of a curtain with the tidiness of a blind, which is why they suit windows where a full drape would crowd the room. Made in the same fabrics as our curtains, so a room can be matched throughout.',
+    images: [
+      '/images/products/blinds-roman.webp',
+      '/images/showroom/fabric-hanging.webp',
+      '/images/showroom/curtain-racks.webp',
+    ],
+    material: 'Curtain-weight fabric, corded fold mechanism',
+    dimensions: 'Made to measure — any width and drop',
+    colors: ['Printed', 'Plain', 'Textured'],
+    availability: 'Made to Order',
+    featured: false,
+    newArrival: true,
+    year: 2026,
+  },
+  {
+    id: 5,
+    slug: 'wooden-venetian-blinds',
+    name: 'Wooden Venetian Blinds',
+    category: 'Blinds',
+    collection: 'Window Blinds',
+    price: null,
+    productCode: 'BL-003',
+    shortDescription: 'Timber slat blinds that tilt to set the light exactly.',
+    description:
+      'Horizontal timber slats on a tilt cord, so you control how much light enters without losing the window entirely. Warmer than aluminium and better suited to living rooms and studies.',
+    images: [
+      '/images/products/blinds-wooden.webp',
+      '/images/showroom/fabric-rail.webp',
+      '/images/showroom/shelves.webp',
+    ],
+    material: 'Basswood slats, cord tilt and lift',
+    dimensions: 'Made to measure — 25mm and 50mm slats',
+    colors: ['Natural', 'Walnut', 'White'],
+    availability: 'Made to Order',
+    featured: false,
+    newArrival: false,
+    year: 2025,
+  },
+  {
+    id: 9,
+    slug: 'printed-roller-blinds-kids',
+    name: 'Printed Kids Roller Blinds',
+    category: 'Blinds',
+    collection: 'Window Blinds',
+    price: null,
+    productCode: 'BL-004',
+    shortDescription: 'Colourful printed roller blinds for a child’s room.',
+    description:
+      'A car-and-city print on a full-width roller blind, run across a stairwell landing here but equally at home on a single window. Printed on a screen or blackout fabric depending on how much light the room needs, and made to your exact width.',
+    images: [
+      '/images/products/blinds-printed-kids.webp',
+      '/images/showroom/blinds-display.webp',
+      '/images/products/blinds-roller.webp',
+    ],
+    material: 'Printed screen or blackout roller fabric, aluminium roller mechanism',
+    dimensions: 'Made to measure — any width and drop',
+    colors: ['Car & City Print', 'Custom prints available'],
+    availability: 'Made to Order',
+    featured: false,
+    newArrival: true,
+    year: 2026,
+  },
+  {
+    id: 23,
+    slug: 'pichwai-cow-lotus-panel',
+    name: 'Pichwai Cow & Lotus Panel',
+    category: 'Wallpaper',
+    collection: 'Wall Murals',
+    price: null,
+    productCode: 'WP-006',
+    shortDescription: 'A backlit Pichwai panel of a cow and calf in a banana-leaf garden.',
+    description:
+      'A hand-illustrated Pichwai-style panel — a cow and calf, garlanded, standing among lotus flowers and banana leaves — set into an arched niche with a timber veneer surround and a continuous LED edge light. Built to your wall and finished on site.',
+    images: [
+      '/images/products/wallpaper-pichwai-cow.webp',
+      '/images/products/wallpaper-cover.jpg',
+      '/images/products/wallpaper-peacock.webp',
+    ],
+    material: 'Non-woven textured printed wallpaper, timber veneer surround, LED edge lighting',
+    dimensions: 'Built to your wall and arch size',
+    colors: ['Full Colour'],
+    availability: 'Made to Order',
+    featured: true,
+    newArrival: true,
+    year: 2026,
+  },
+  {
+    id: 24,
+    slug: 'arched-mountain-bike-mural',
+    name: 'Arched Mountain Bike Mural',
+    category: 'Wallpaper',
+    collection: 'Wall Murals',
+    price: null,
+    productCode: 'WP-007',
+    shortDescription: 'A flat-illustration mountain scene, set into an arched niche.',
+    description:
+      'A modern, flat-illustration mural of a sunrise over layered mountains, with a bike silhouetted against the ridgeline — printed to fit an arched wall niche with a painted timber surround. Popular for a teen bedroom, study nook or landing.',
+    images: [
+      '/images/products/wallpaper-mountain-arch.webp',
+      '/images/products/wallpaper-dandelion.webp',
+      '/images/products/wallpaper-stone.webp',
+    ],
+    material: 'Non-woven textured printed wallpaper, matte finish',
+    dimensions: 'Built to your wall and arch size',
+    colors: ['Full Colour'],
+    availability: 'Made to Order',
+    featured: true,
+    newArrival: true,
+    year: 2026,
+  },
+  {
+    id: 6,
+    slug: 'scenic-mural-wallpaper',
+    name: 'Scenic Full-Wall Murals',
+    category: 'Wallpaper',
+    collection: 'Wall Murals',
+    price: null,
+    productCode: 'WP-001',
+    shortDescription: 'Forest, waterfall and world-map murals, printed to your exact wall.',
+    description:
+      'High-definition full-wall printed murals — from a woodland deer scene to a cascading waterfall to a vintage world map — printed to the exact dimensions of your wall. A centrepiece for a living room, staircase or entrance lobby.',
+    images: [
+      '/images/products/wallpaper-forest.webp',
+      '/images/products/wallpaper-waterfall.webp',
+      '/images/products/wallpaper-worldmap.webp',
+    ],
+    material: 'Non-woven textured printed wallpaper, matte finish',
+    dimensions: 'Printed to your wall size',
+    colors: ['Scenic', 'Custom Artwork'],
+    availability: 'Made to Order',
+    featured: true,
+    newArrival: true,
+    year: 2026,
+  },
+  {
+    id: 7,
+    slug: 'radha-krishna-garden-mural',
+    name: 'Radha Krishna Garden Swing Mural',
+    category: 'Wallpaper',
+    collection: 'Wall Murals',
+    price: null,
+    productCode: 'WP-002',
+    shortDescription: 'A devotional garden swing scene, framed in living greenery.',
+    description:
+      'A full-wall mural of Radha and Krishna on a flower-hung swing, painted in a traditional garden setting with peacocks, doves and a cow at the water’s edge. Printed to your exact wall and typically framed with a border of artificial greenery, as shown, for pooja rooms, entrance lobbies and dining walls.',
+    images: [
+      '/images/products/wallpaper-cover.jpg',
+      '/images/products/wallpaper-peacock.webp',
+      '/images/products/wallpaper-floral.webp',
+    ],
+    material: 'Non-woven textured printed wallpaper, matte finish',
+    dimensions: 'Printed to your wall size',
+    colors: ['Full Colour', 'Custom Artwork'],
+    availability: 'Made to Order',
+    featured: true,
+    newArrival: true,
+    year: 2026,
+  },
+  {
+    id: 22,
+    slug: 'peacock-arch-wall-panel',
+    name: 'Peacock Arch Wall Panel',
+    category: 'Wallpaper',
+    collection: 'Wall Murals',
+    price: null,
+    productCode: 'WP-005',
+    shortDescription: 'A backlit arch mural with peacocks and floral detailing.',
+    description:
+      'A bespoke decorative arch panel with hand-illustrated peacock and floral artwork, framed within timber casing and warm LED backlighting. A captivating focal point for dining areas and entrance lobbies.',
+    images: [
+      '/images/products/wallpaper-peacock.webp',
+      '/images/products/wallpaper-dandelion.webp',
+      '/images/products/wallpaper-stone.webp',
+    ],
+    material: 'Textured non-woven wallpaper with wood and LED frame',
+    dimensions: 'Printed & built to your wall size',
+    colors: ['Full Colour'],
+    availability: 'Made to Order',
+    featured: false,
+    newArrival: false,
+    year: 2026,
+  },
+  {
+    id: 8,
+    slug: 'textured-wallcovering',
+    name: 'Textured Wallcovering',
+    category: 'Wallpaper',
+    collection: 'Wallcoverings',
+    price: null,
+    productCode: 'WP-003',
+    shortDescription: 'Rolled wallpaper with a raised, tactile surface.',
+    description:
+      'Sold by the roll rather than printed to size. The raised texture catches light across the day, which makes a plain wall considerably less plain without introducing a pattern that will date.',
+    images: [
+      '/images/products/wallpaper-stone.webp',
+      '/images/products/wall-panel-mixed.webp',
+      '/images/showroom/wallpaper-rolls.webp',
+    ],
+    material: 'Vinyl-coated textured wallpaper',
+    dimensions: 'Standard roll — 10m × 0.53m',
+    colors: ['Sand', 'Stone', 'Olive', 'Graphite'],
+    availability: 'In Stock',
+    featured: false,
+    newArrival: false,
+    year: 2024,
+  },
+  {
+    id: 10,
+    slug: 'designer-organic-rugs',
+    name: 'Designer Organic Rugs',
+    category: 'Flooring',
+    collection: 'Floor Coverings',
+    price: null,
+    productCode: 'FL-001',
+    shortDescription: 'Hand-tufted rugs cut and bound to a free, organic outline.',
+    description:
+      'Rugs that are not rectangles. Each one is hand-tufted in wool-blend pile and cut to a flowing organic outline, then bound by hand so the edge holds its shape. Laid straight over marble, tile or wood — no need to touch the floor underneath. The shape, size and colour blocking are all specified to your room.',
+    images: [
+      '/images/products/flooring-rug-cover.webp',
+      '/images/rooms/living-rug.webp',
+      '/images/rooms/living-carpet.webp',
+    ],
+    material: 'Hand-tufted wool-blend pile, hand-bound edge',
+    dimensions: 'Cut and bound to your layout',
+    colors: ['Ochre & Brown', 'Custom colour blocking'],
+    availability: 'Made to Order',
+    featured: true,
+    newArrival: true,
+    year: 2026,
+  },
+  {
+    id: 25,
+    slug: 'auditorium-theatre-carpet',
+    name: 'Auditorium & Theatre Carpet',
+    category: 'Flooring',
+    collection: 'Floor Coverings',
+    price: null,
+    productCode: 'FL-005',
+    shortDescription: 'Heavy-duty roll carpet for auditoriums and home theatres.',
+    description:
+      'Wall-to-wall tufted roll carpet laid through auditoriums, halls and home theatres — chosen for a dense, hard-wearing pile that takes constant foot traffic between seating rows and helps deaden echo in a large room. Supplied and fitted around fixed seating by our own team.',
+    images: [
+      '/images/products/flooring-carpet-auditorium.webp',
+      '/images/products/flooring-carpet-tile.webp',
+      '/images/rooms/living-carpet.webp',
+    ],
+    material: 'Heavy-duty tufted nylon roll carpet',
+    dimensions: 'Cut and fitted to your room',
+    colors: ['Blue', 'Full contract range in store'],
+    availability: 'Made to Order',
+    featured: true,
+    newArrival: true,
+    year: 2026,
+  },
+  {
+    id: 26,
+    slug: 'office-carpet-tiles',
+    name: 'Office Carpet Tiles',
+    category: 'Flooring',
+    collection: 'Floor Coverings',
+    price: null,
+    productCode: 'FL-006',
+    shortDescription: 'Modular carpet tiles for corporate fit-outs and workspaces.',
+    description:
+      'Modular tiles laid across open-plan offices and workstations. Because they lift individually, a damaged or stained tile is swapped rather than the whole floor relaid — which is why they suit workspaces that stay in use. Laid during fit-out, ahead of the furniture going in.',
+    images: [
+      '/images/products/flooring-carpet-tile.webp',
+      '/images/products/flooring-carpet-auditorium.webp',
+      '/images/products/flooring-grey.webp',
+    ],
+    material: 'Bitumen-backed modular carpet tiles',
+    dimensions: 'Standard 50 × 50 cm tiles, laid to your floor area',
+    colors: ['Charcoal', 'Grey', 'Full contract range in store'],
+    availability: 'Made to Order',
+    featured: false,
+    newArrival: true,
+    year: 2026,
+  },
+  {
+    id: 11,
+    slug: 'wooden-flooring',
+    name: 'Wooden & Laminate Flooring',
+    category: 'Flooring',
+    collection: 'Floor Coverings',
+    price: null,
+    productCode: 'FL-002',
+    shortDescription: 'Laminate and engineered wood planks, supplied and expertly laid.',
+    description:
+      'High wear-resistant click-lock laminate and engineered wooden flooring laid over acoustic and moisture barriers with matched beading and profile transitions. Perfect for bedrooms, dressing areas, and premium offices.',
+    images: [
+      '/images/products/flooring-plank-alt.webp',
+      '/images/products/flooring-plank.webp',
+      '/images/products/flooring-swatches.webp',
+      '/images/products/flooring-grey.webp',
+    ],
+    material: 'Laminate and engineered wood planks, AC4/AC5 wear rating',
+    dimensions: 'Supplied per sq. ft., fitted',
+    colors: ['Light Oak', 'Natural Teak', 'Walnut', 'Grey Wash'],
+    availability: 'Made to Order',
+    featured: true,
+    newArrival: false,
+    year: 2026,
+  },
+  {
+    id: 12,
+    slug: 'artificial-grass-turf',
+    name: 'Artificial Grass Turf & Vertical Greenery',
+    category: 'Flooring',
+    collection: 'Floor Coverings',
+    price: null,
+    productCode: 'FL-003',
+    shortDescription: 'High-density synthetic turf for balconies, terraces, and green walls.',
+    description:
+      'Lush, UV-stabilised artificial grass turf for balconies, terraces, sports turf, and vertical backdrop framing behind wall murals and reception displays. Weather-proof, easy to wash, and maintenance-free.',
+    images: [
+      '/images/products/turf-grass.webp',
+      '/images/products/turf-terrace.webp',
+      '/images/products/turf-pattern.webp',
+    ],
+    material: 'UV-stabilised polyethylene turf (25mm–45mm pile height)',
+    dimensions: 'Cut to size from roll',
+    colors: ['Natural Green', 'Dual-Tone Lush Green'],
+    availability: 'In Stock',
+    featured: false,
+    newArrival: false,
+    year: 2026,
+  },
+  {
+    id: 21,
+    slug: 'marble-parquet-flooring',
+    name: 'Marble, Parquet & Mosaic Tile',
+    category: 'Flooring',
+    collection: 'Floor Coverings',
+    price: null,
+    productCode: 'FL-004',
+    shortDescription: 'Polished marble, herringbone parquet and decorative mosaic tile.',
+    description:
+      'Book-matched marble slabs for a genuinely still surface, herringbone or parquet timber for rooms that want warmth instead, and decorative mosaic tile for kitchens, bathrooms and feature floors. All supplied, cut and laid by our own team rather than sub-contracted.',
+    images: [
+      '/images/products/flooring-marble.webp',
+      '/images/products/flooring-parquet.webp',
+      '/images/products/flooring-mosaic.webp',
+    ],
+    material: 'Polished natural marble, engineered parquet timber',
+    dimensions: 'Supplied per sq. ft., fitted',
+    colors: ['Marble tones vary by slab', 'Natural Oak', 'Walnut'],
+    availability: 'Made to Order',
+    featured: false,
+    newArrival: true,
+    year: 2026,
+  },
+  {
+    id: 13,
+    slug: 'upholstered-bed-headboard',
+    name: 'Upholstered Bed & Headboard',
+    category: 'Bedding',
+    collection: 'Bedroom',
+    price: null,
+    productCode: 'BD-001',
+    shortDescription: 'A bed with a padded headboard, made in your fabric.',
+    description:
+      'Built to your bed size and upholstered in a fabric you choose from the showroom. The headboard can be plain, channelled or button-tufted, and can run wider than the bed to fill the wall.',
+    images: [
+      '/images/products/bed-tufted.webp',
+      '/images/products/headboard-checkered.webp',
+      '/images/products/headboard-hex.webp',
+    ],
+    material: 'Engineered frame, foam and fabric upholstery',
+    dimensions: 'Single, Double, Queen and King',
+    colors: ['Fabric of your choice'],
+    availability: 'Made to Order',
+    featured: true,
+    newArrival: false,
+    year: 2025,
+  },
+  {
+    id: 14,
+    slug: 'quilted-mattress',
+    name: 'Quilted Mattress',
+    category: 'Bedding',
+    collection: 'Bedroom',
+    price: null,
+    productCode: 'BD-002',
+    shortDescription: 'Foam and spring mattresses in every standard size.',
+    description:
+      'We stock several firmnesses, and the only way to choose is to lie on them — which is exactly what the showroom is for. Custom sizes are available for non-standard beds and diwans.',
+    images: [
+      '/images/products/mattress-quilted.webp',
+      '/images/showroom/bedding-display.webp',
+      '/images/products/bed-channel.webp',
+    ],
+    material: 'High-density foam, bonnell or pocket spring',
+    dimensions: 'All standard sizes, plus custom',
+    colors: ['Quilted white', 'Quilted grey'],
+    availability: 'In Stock',
+    featured: false,
+    newArrival: false,
+    year: 2024,
+  },
+  {
+    id: 15,
+    slug: 'panelled-bedhead-wall',
+    name: 'Panelled Bedhead Wall',
+    category: 'Bedding',
+    collection: 'Bedroom',
+    price: null,
+    productCode: 'BD-003',
+    shortDescription: 'A full-wall bedhead built from tufted or 3D panels.',
+    description:
+      'A wall treatment rather than a piece of furniture — hexagonal or checkerboard upholstered panels built to the width of the wall, so the bed reads as part of the room rather than a piece dropped into it.',
+    images: [
+      '/images/products/headboard-hex.webp',
+      '/images/products/wall-panel-mixed.webp',
+      '/images/rooms/bedroom-flamingo.webp',
+    ],
+    material: 'Upholstered panels, laminate trim, LED profile',
+    dimensions: 'Built to your wall',
+    colors: ['Fabric and trim of your choice'],
+    availability: 'Made to Order',
+    featured: false,
+    newArrival: true,
+    year: 2026,
+  },
+  {
+    id: 16,
+    slug: 'bed-sheets-and-covers',
+    name: 'Bed Sheets & Covers',
+    category: 'Bedding',
+    collection: 'Home Linen',
+    price: null,
+    productCode: 'BD-004',
+    shortDescription: 'Cotton bed sheets, dohars and covers, off the shelf.',
+    description:
+      'The part of the shop you can walk out with the same day. Sheet sets, dohars, quilts and mattress protectors in every standard size, stacked so you can feel the cotton before you buy it.',
+    images: [
+      '/images/showroom/bedding-stacks.webp',
+      '/images/showroom/bedding-display.webp',
+      '/images/showroom/shelves.webp',
+    ],
+    material: 'Cotton and cotton-blend',
+    dimensions: 'Single, Double, Queen, King',
+    colors: ['Many designs in store'],
+    availability: 'In Stock',
+    featured: false,
+    newArrival: false,
+    year: 2024,
+  },
+  {
+    id: 17,
+    slug: 'cushions-and-covers',
+    name: 'Cushions & Covers',
+    category: 'Furnishings',
+    collection: 'Home Linen',
+    price: null,
+    productCode: 'FN-001',
+    shortDescription: 'Filled cushions and covers, plain, printed and embroidered.',
+    description:
+      'The cheapest way to change how a room feels, and the one most people underestimate. We keep a full wall of covers in the showroom, and can make them in your curtain fabric so the room reads as one idea.',
+    images: [
+      '/images/showroom/cushion-wall.webp',
+      '/images/products/cushions-yellow.webp',
+      '/images/showroom/fabric-hanging.webp',
+    ],
+    material: 'Cotton, velvet, jacquard and embroidered covers',
+    dimensions: '16in, 18in, 24in and custom',
+    colors: ['Full range in store'],
+    availability: 'In Stock',
+    featured: true,
+    newArrival: false,
+    year: 2025,
+  },
+  {
+    id: 18,
+    slug: 'sofa-upholstery-service',
+    name: 'Sofa Upholstery & Re-covering',
+    category: 'Furnishings',
+    collection: 'Services',
+    price: null,
+    productCode: 'FN-002',
+    shortDescription: 'Re-cover an existing sofa or create bespoke boucle seating.',
+    description:
+      'A well-built frame outlasts its fabric by decades. We strip, re-foam where needed and re-cover in a fabric from the showroom — from textured boucle to woven chenille — usually for a fraction of what a new sofa costs.',
+    images: [
+      '/images/rooms/sofa-tan.webp',
+      '/images/products/sofa-corner.webp',
+      '/images/rooms/sofa-olive.webp',
+    ],
+    material: 'Upholstery fabric and leatherette, foam',
+    dimensions: 'Quoted after inspection',
+    colors: ['Full fabric library in store'],
+    availability: 'Enquire',
+    featured: false,
+    newArrival: false,
+    year: 2024,
+  },
+  {
+    id: 19,
+    slug: 'wall-panelling',
+    name: 'Decorative Wall Panelling',
+    category: 'Furnishings',
+    collection: 'Wallcoverings',
+    price: null,
+    productCode: 'FN-003',
+    shortDescription: 'Fluted, upholstered and 3D panels for feature walls.',
+    description:
+      'Fluted timber, upholstered sections and moulded 3D panels, fitted to a feature wall in a living room, bedroom or reception. Usually specified alongside the wallpaper or curtains so the whole wall is designed at once.',
+    images: [
+      '/images/products/wall-panel.webp',
+      '/images/products/wall-panel-mixed.webp',
+      '/images/rooms/living-green.webp',
+    ],
+    material: 'MDF flutes, upholstered panels, PVC 3D panels',
+    dimensions: 'Built to your wall',
+    colors: ['Finish of your choice'],
+    availability: 'Made to Order',
+    featured: false,
+    newArrival: true,
+    year: 2026,
+  },
+  {
+    id: 20,
+    slug: 'mosquito-nets-and-screens',
+    name: 'Mosquito Nets & Window Screens',
+    category: 'Furnishings',
+    collection: 'Window Blinds',
+    price: null,
+    productCode: 'FN-004',
+    shortDescription: 'Fitted insect screens for windows and balcony doors.',
+    description:
+      'Pleated and roll-up insect screens fitted into the window frame, so the window still opens and closes normally. Practical rather than decorative, and one of the most common things we are asked for.',
+    images: [
+      '/images/products/blinds-wooden.webp',
+      '/images/showroom/fabric-rail.webp',
+      '/images/rooms/living-wide.webp',
+    ],
+    material: 'Fibreglass mesh, aluminium frame',
+    dimensions: 'Made to measure',
+    colors: ['White', 'Brown', 'Grey'],
+    availability: 'Made to Order',
+    featured: false,
+    newArrival: false,
+    year: 2024,
+  },
+];
+
+/* ------------------------------------------------------------------
+ *  Derived data — computed from the catalogue above, never duplicated.
+ * ----------------------------------------------------------------- */
+
+export const categories = [
+  {
+    id: 'curtains',
+    name: 'Curtains',
+    number: '01',
+    description: 'Blackout drapes and day sheers, made to your window.',
+    image: 'categoryCurtains',
+  },
+  {
+    id: 'blinds',
+    name: 'Blinds',
+    number: '02',
+    description: 'Roller, roman, venetian and wooden blinds, fitted.',
+    image: 'categoryBlinds',
+  },
+  {
+    id: 'wallpaper',
+    name: 'Wallpaper',
+    number: '03',
+    description: 'Printed murals and textured wallcoverings for feature walls.',
+    image: 'categoryWallpaper',
+  },
+  {
+    id: 'flooring',
+    name: 'Flooring',
+    number: '04',
+    description: 'Carpets, wooden flooring and terrace turf, supplied and laid.',
+    image: 'categoryFlooring',
+  },
+  {
+    id: 'bedding',
+    name: 'Bedding',
+    number: '05',
+    description: 'Beds, headboards, mattresses and everything that goes on them.',
+    image: 'categoryBedding',
+  },
+  {
+    id: 'furnishings',
+    name: 'Furnishings',
+    number: '06',
+    description: 'Cushions, upholstery, panelling and the finishing layer.',
+    image: 'categoryUpholstery',
+  },
+];
+
+export const categoryNames = categories.map((c) => c.name);
+
+export const collections = [...new Set(products.map((p) => p.collection))].sort();
+
+export const availabilityOptions = [...new Set(products.map((p) => p.availability))];
+
+const pricedProducts = products.filter((p) => typeof p.price === 'number');
+
+/** False while everything is quoted on enquiry — the price filter hides itself. */
+export const hasPrices = pricedProducts.length > 0;
+
+export const priceBounds = {
+  min: 0,
+  max: hasPrices
+    ? Math.ceil(Math.max(...pricedProducts.map((p) => p.price)) / 10000) * 10000
+    : 100000,
+};
+
+export const featuredProducts = products.filter((p) => p.featured);
+export const newArrivals = products.filter((p) => p.newArrival);
+
+export function getProductBySlug(slug) {
+  return products.find((p) => p.slug === slug);
+}
+
+export function getRelatedProducts(product, limit = 3) {
+  if (!product) return [];
+  const sameCollection = products.filter(
+    (p) => p.id !== product.id && p.collection === product.collection
+  );
+  const sameCategory = products.filter(
+    (p) =>
+      p.id !== product.id &&
+      p.category === product.category &&
+      !sameCollection.includes(p)
+  );
+  return [...sameCollection, ...sameCategory].slice(0, limit);
+}
+
+export function countByCategory(name) {
+  return products.filter((p) => p.category === name).length;
+}

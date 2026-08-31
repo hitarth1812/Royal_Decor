@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* shadcn semantic tokens mapped onto the showroom palette */
+    --background: 42 43% 95%;        /* warm ivory  #F7F3EA */
+    --foreground: 0 0% 4%;           /* logo black   #0A0A0A */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 4%;
+
+    --primary: 0 0% 4%;
+    --primary-foreground: 42 43% 95%;
+
+    --secondary: 38 37% 85%;         /* sand light */
+    --secondary-foreground: 0 0% 4%;
+
+    --muted: 40 30% 91%;
+    --muted-foreground: 220 10% 40%;
+
+    --accent: 342 77% 27%;           /* logo crimson #7A1030 */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 36 22% 84%;
+    --input: 36 22% 84%;
+    --ring: 342 77% 27%;
+
+    --radius: 16px;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Never allow a stray element to create a horizontal scrollbar */
+  #root {
+    overflow-x: clip;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-editorial;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--accent));
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: #7A1030;
+    color: #fff;
+  }
+
+  /* Custom scrollbar — desktop only */
+  @media (pointer: fine) {
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track { background: #EFE9DC; }
+    ::-webkit-scrollbar-thumb { background: #C7B79E; border-radius: 999px; border: 3px solid #EFE9DC; }
+    ::-webkit-scrollbar-thumb:hover { background: #7A1030; }
+  }
+}
+
+@layer components {
+  /* --- Editorial label (small caps eyebrow) --- */
+  .eyebrow {
+    @apply text-label font-medium uppercase tracking-label text-crimson;
+  }
+
+  .eyebrow-muted {
+    @apply text-label font-medium uppercase tracking-label text-muted-foreground;
+  }
+
+  /* --- Section rhythm --- */
+  .section {
+    @apply py-20 md:py-28 lg:py-36;
+  }
+
+  .shell {
+    @apply mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12;
+  }
+
+  /* --- Scroll reveal (IntersectionObserver adds .is-visible) --- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* --- Line-by-line headline reveal --- */
+  .line-mask {
+    display: block;
+    overflow: hidden;
+  }
+
+  .line-mask > span {
+    display: block;
+    transform: translateY(105%);
+    animation: line-rise 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: var(--line-delay, 0ms);
+  }
+
+  @keyframes line-rise {
+    to { transform: none; }
+  }
+
+  /* --- Frosted floating panel --- */
+  .glass {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+
+  .glass-dark {
+    background: rgba(11, 13, 16, 0.55);
+    backdrop-filter: blur(20px) saturate(1.3);
+    -webkit-backdrop-filter: blur(20px) saturate(1.3);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  /* --- Underline that draws on hover --- */
+  .link-underline {
+    position: relative;
+  }
+
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* --- Horizontal snap rail --- */
+  .rail {
+    @apply flex snap-x snap-mandatory overflow-x-auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-padding-left: 1.25rem;
+  }
+
+  .rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  .rail > * {
+    @apply snap-start shrink-0;
+  }
+
+  /* --- Grain overlay for dark cinematic sections --- */
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+
+  .mask-fade-r {
+    -webkit-mask-image: linear-gradient(to right, #000 88%, transparent 100%);
+    mask-image: linear-gradient(to right, #000 88%, transparent 100%);
+  }
+}
+
+/* --- Reduced motion: honour the user's system preference --- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .line-mask > span {
+    transform: none !important;
+  }
+}
