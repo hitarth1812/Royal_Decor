@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Royal Decor — Premium Showroom Website
 
 A frontend-only showroom website built with **React + Vite + Tailwind CSS + shadcn/ui**.
@@ -317,3 +318,6 @@ npx shadcn@latest add tooltip
 - Images are WebP, lazy-loaded, and served with a responsive `srcset`.
 - Verified in-browser: no console errors, no horizontal overflow at
   375 / 430 / 768 / 1024 / 1440 px.
+=======
+# Royal_Decor
+>>>>>>> e999d70a1b36632d0d4a1eac5a14f40651dd8249
