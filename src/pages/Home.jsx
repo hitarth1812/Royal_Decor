@@ -3,7 +3,6 @@ import { Hero } from '@/components/Hero';
 import { Marquee } from '@/components/Marquee';
 import { CategorySection } from '@/components/CategorySection';
 import { FeaturedCollection } from '@/components/FeaturedCollection';
-import { RoomGallery } from '@/components/RoomGallery';
 import { StatsSection } from '@/components/StatsSection';
 import { NewArrivals } from '@/components/NewArrivals';
 import { WhyChooseUs } from '@/components/WhyChooseUs';
@@ -26,7 +25,6 @@ export default function Home() {
       <Marquee />
       <CategorySection />
       <FeaturedCollection />
-      <RoomGallery />
       <StatsSection />
       <NewArrivals />
       <ShowroomSection />
