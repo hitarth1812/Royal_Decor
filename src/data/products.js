@@ -743,7 +743,6 @@ export const priceBounds = {
 };
 
 export const featuredProducts = products.filter((p) => p.featured);
-export const newArrivals = products.filter((p) => p.newArrival);
 
 export function getProductBySlug(slug) {
   return products.find((p) => p.slug === slug);

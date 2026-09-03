@@ -56,7 +56,7 @@ export function ShowroomSection() {
             <Reveal>
               <p className="eyebrow flex items-center gap-2.5">
                 <span className="h-px w-8 bg-crimson" aria-hidden="true" />
-                The showroom
+                About the showroom
               </p>
 
               <h2 className="mt-5 text-section font-light text-navy">

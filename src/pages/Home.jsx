@@ -4,7 +4,6 @@ import { Marquee } from '@/components/Marquee';
 import { CategorySection } from '@/components/CategorySection';
 import { FeaturedCollection } from '@/components/FeaturedCollection';
 import { StatsSection } from '@/components/StatsSection';
-import { NewArrivals } from '@/components/NewArrivals';
 import { WhyChooseUs } from '@/components/WhyChooseUs';
 import { ShowroomSection } from '@/components/ShowroomSection';
 import { BrandsSection } from '@/components/BrandsSection';
@@ -26,7 +25,6 @@ export default function Home() {
       <CategorySection />
       <FeaturedCollection />
       <StatsSection />
-      <NewArrivals />
       <ShowroomSection />
       <BrandsSection />
       <WhyChooseUs />
