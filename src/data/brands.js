@@ -35,22 +35,21 @@ function placeholderLogo(name) {
 // `size` is the optical width tier used to normalise very different
 // logo proportions against each other (a wide wordmark and a compact
 // monogram should read as the same visual "weight" on the wall, not
-// the same pixel width). `single` marks the brands that sit alone,
-// centred, on their own line in the desktop editorial composition —
-// see BrandWall's row pattern.
+// the same pixel width).
 export const brands = [
-  { id: 'ddecor', name: "D'DECOR", logo: '/images/brand/ddecor.svg', alt: "D'DECOR logo", placeholder: false, size: 'wide', single: false },
-  { id: 'sarom', name: 'SAROM', logo: '/images/brand/sarom.svg', alt: 'Sarom logo', placeholder: false, size: 'medium', single: false },
-  { id: 'nestra', name: 'NESTRA', logo: '/images/brand/nestra.png', alt: 'Nestra logo', placeholder: false, size: 'medium', single: true },
-  { id: 'asian-paints', name: 'ASIAN PAINTS', logo: '/images/brand/asian-paints.svg', alt: 'Asian Paints logo', placeholder: false, size: 'wide', single: false },
-  { id: 'portico', name: 'PORTICO', logo: '/images/brand/portico.svg', alt: 'Portico logo', placeholder: false, size: 'wide', single: false },
-  { id: 'welspun', name: 'WELSPUN', logo: '/images/brand/welspun.png', alt: 'Welspun logo', placeholder: false, size: 'wide', single: true },
-  { id: 'excel-wallpaper', name: 'EXCEL WALLPAPER', logo: '/images/brand/excel-wallpaper.png', alt: 'Excel Wallpaper logo', placeholder: false, size: 'compact', single: false },
-  { id: 'd3', name: 'D3', logo: placeholderLogo('D3'), alt: 'D3 logo', placeholder: true, size: 'compact', single: false },
-  { id: 'nu-homes', name: 'NU HOMES', logo: placeholderLogo('NU HOMES'), alt: 'Nu Homes logo', placeholder: true, size: 'compact', single: true },
-  { id: 'sleep-guardian', name: 'SLEEP GUARDIAN', logo: '/images/brand/sleep-guardian.jpg', alt: 'Sleep Guardian logo', placeholder: false, size: 'medium', single: false },
-  { id: 'signature', name: 'SIGNATURE', logo: placeholderLogo('SIGNATURE'), alt: 'Signature logo', placeholder: true, size: 'compact', single: false },
-  { id: 'wall-empire', name: 'WALL EMPIRE', logo: '/images/brand/wall-empire.jpg', alt: 'Wall Empire logo', placeholder: false, size: 'medium', single: true },
+  { id: 'ddecor', name: "D'DECOR", logo: '/images/brand/ddecor.svg', alt: "D'DECOR logo", placeholder: false, size: 'wide' },
+  { id: 'sarom', name: 'SAROM', logo: '/images/brand/sarom.svg', alt: 'Sarom logo', placeholder: false, size: 'medium' },
+  { id: 'nestra', name: 'NESTRA', logo: '/images/brand/nestra.png', alt: 'Nestra logo', placeholder: false, size: 'medium' },
+  { id: 'asian-paints', name: 'ASIAN PAINTS', logo: '/images/brand/asian-paints.svg', alt: 'Asian Paints logo', placeholder: false, size: 'wide' },
+  { id: 'portico', name: 'PORTICO', logo: '/images/brand/portico.svg', alt: 'Portico logo', placeholder: false, size: 'wide' },
+  { id: 'welspun', name: 'WELSPUN', logo: '/images/brand/welspun.png', alt: 'Welspun logo', placeholder: false, size: 'wide' },
+  { id: 'excel-wallpaper', name: 'EXCEL WALLPAPER', logo: '/images/brand/excel-wallpaper.png', alt: 'Excel Wallpaper logo', placeholder: false, size: 'compact' },
+  { id: 'd3', name: 'D3', logo: placeholderLogo('D3'), alt: 'D3 logo', placeholder: true, size: 'compact' },
+  { id: 'nu-homes', name: 'NU HOMES', logo: placeholderLogo('NU HOMES'), alt: 'Nu Homes logo', placeholder: true, size: 'compact' },
+  { id: 'sleep-guardian', name: 'SLEEP GUARDIAN', logo: '/images/brand/sleep-guardian.jpg', alt: 'Sleep Guardian logo', placeholder: false, size: 'medium' },
+  { id: 'signature', name: 'SIGNATURE', logo: placeholderLogo('SIGNATURE'), alt: 'Signature logo', placeholder: true, size: 'compact' },
+  { id: 'wall-empire', name: 'WALL EMPIRE', logo: '/images/brand/wall-empire.jpg', alt: 'Wall Empire logo', placeholder: false, size: 'medium' },
+  { id: 'sleepwell', name: 'SLEEPWELL', logo: '/images/brand/sleepwell.svg', alt: 'Sleepwell logo', placeholder: false, size: 'wide' },
 ];
 
 export default brands;

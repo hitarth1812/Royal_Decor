@@ -107,7 +107,7 @@ export default {
   			display: [
   				'clamp(3rem, 7vw, 7rem)',
   				{
-  					lineHeight: '0.94',
+  					lineHeight: '1.18',
   					letterSpacing: '-0.04em'
   				}
   			],

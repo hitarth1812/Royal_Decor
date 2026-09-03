@@ -74,7 +74,7 @@ export const products = [
     description:
       'Clean, versatile window coverings available in motorized, sunscreen, blackout, and custom digital printed options (including themed architectural and artwork prints).',
     images: [
-      '/images/showroom/blinds-display.webp',
+      '/images/products/blinds-roller-zebra.webp',
       '/images/showroom/wallpaper-rolls.webp',
     ],
     material: 'Sunscreen, blackout and printed polyester fabric',
@@ -119,7 +119,7 @@ export const products = [
     description:
       'Horizontal timber slats on a tilt cord, so you control how much light enters without losing the window entirely. Warmer than aluminium and better suited to living rooms and studies.',
     images: [
-      '/images/products/blinds-wooden.webp',
+      '/images/products/blinds-venetian-wood.webp',
       '/images/showroom/fabric-aisle.webp',
     ],
     material: 'Basswood slats, cord tilt and lift',

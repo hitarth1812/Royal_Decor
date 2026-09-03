@@ -39,7 +39,7 @@ export function ShowroomSection() {
               alt="The Royal Decor Exclusive shopfront on Rander Road"
               width={1200}
               sizes="(max-width: 1024px) 92vw, 45vw"
-              wrapperClassName="aspect-[9/16] rounded-panel"
+              wrapperClassName="aspect-[900/1683] rounded-panel"
               className="transition-transform [transition-duration:1400ms] ease-premium hover:scale-[1.03]"
             />
 

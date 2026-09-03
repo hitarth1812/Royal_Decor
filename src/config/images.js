@@ -59,8 +59,10 @@ export const images = {
   heroAccent: '/images/rooms/living-curtains.webp',
 
   // Showroom, about and calls to action.
-  // showroomInterior is the current shopfront signage (9:16, portrait)
-  // — showroomWide is the consultation desk and curtain display wall
+  // showroomInterior is the current shopfront signage (tall portrait —
+  // the wrapper's aspect ratio in ShowroomSection.jsx must match this
+  // file's own dimensions exactly, or object-cover crops it) —
+  // showroomWide is the consultation desk and curtain display wall
   // (16:9, landscape). Both containers are sized to each photo's own
   // aspect ratio so neither is cropped.
   showroomInterior: '/images/showroom/storefront-live.webp',
