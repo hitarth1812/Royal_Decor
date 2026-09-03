@@ -92,6 +92,10 @@ export function TestimonialCarousel() {
                   onClick={() => go(i)}
                   className={cn(
                     'h-1 rounded-full transition-all duration-500 ease-premium',
+                    // The bar itself stays 4px tall; the pseudo-element
+                    // grows the touch target to ~44px without nudging
+                    // the layout or changing how the dot looks.
+                    'relative before:absolute before:-inset-x-2 before:-inset-y-5 before:content-[""]',
                     i === index ? 'w-8 bg-crimson' : 'w-3 bg-ivory/25 hover:bg-ivory/50'
                   )}
                 />

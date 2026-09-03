@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-sitemap.mjs && vite build",
+    "build": "node scripts/generate-sitemap.mjs && node scripts/generate-image-manifest.mjs && vite build",
     "preview": "vite preview",
-    "sitemap": "node scripts/generate-sitemap.mjs"
+    "sitemap": "node scripts/generate-sitemap.mjs",
+    "images": "node scripts/generate-image-manifest.mjs"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.20",

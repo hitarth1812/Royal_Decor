@@ -144,7 +144,7 @@ export function EnquiryForm({ defaultProduct = '', className, compact = false })
     <form onSubmit={handleSubmit} noValidate className={cn('space-y-5', className)}>
       <div className={cn('grid gap-5', !compact && 'sm:grid-cols-2')}>
         <div className="space-y-2">
-          <Label htmlFor="enquiry-name" className="text-[0.625rem] uppercase tracking-label text-muted-foreground">
+          <Label htmlFor="enquiry-name" className="label-xs uppercase tracking-label text-muted-foreground">
             Name *
           </Label>
           <Input
@@ -160,7 +160,7 @@ export function EnquiryForm({ defaultProduct = '', className, compact = false })
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="enquiry-phone" className="text-[0.625rem] uppercase tracking-label text-muted-foreground">
+          <Label htmlFor="enquiry-phone" className="label-xs uppercase tracking-label text-muted-foreground">
             Phone *
           </Label>
           <Input
@@ -180,7 +180,7 @@ export function EnquiryForm({ defaultProduct = '', className, compact = false })
 
       <div className={cn('grid gap-5', !compact && 'sm:grid-cols-2')}>
         <div className="space-y-2">
-          <Label htmlFor="enquiry-email" className="text-[0.625rem] uppercase tracking-label text-muted-foreground">
+          <Label htmlFor="enquiry-email" className="label-xs uppercase tracking-label text-muted-foreground">
             Email
           </Label>
           <Input
@@ -197,7 +197,7 @@ export function EnquiryForm({ defaultProduct = '', className, compact = false })
         </div>
 
         <div className="space-y-2">
-          <Label className="text-[0.625rem] uppercase tracking-label text-muted-foreground">
+          <Label className="label-xs uppercase tracking-label text-muted-foreground">
             Product interest
           </Label>
           <Select value={values.product} onValueChange={set('product')}>
@@ -223,7 +223,7 @@ export function EnquiryForm({ defaultProduct = '', className, compact = false })
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="enquiry-message" className="text-[0.625rem] uppercase tracking-label text-muted-foreground">
+        <Label htmlFor="enquiry-message" className="label-xs uppercase tracking-label text-muted-foreground">
           Message *
         </Label>
         <Textarea

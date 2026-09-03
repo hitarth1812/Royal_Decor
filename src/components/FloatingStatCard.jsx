@@ -22,7 +22,7 @@ export function FloatingStatCard({ value, label, caption, className, dark = fals
       <p className="font-display text-3xl font-semibold tracking-tightest md:text-4xl">{value}</p>
       <p
         className={cn(
-          'mt-2 text-[0.625rem] uppercase tracking-label',
+          'mt-2 label-xs uppercase tracking-label',
           dark ? 'text-ivory/70' : 'text-navy/60'
         )}
       >

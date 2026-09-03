@@ -14,7 +14,7 @@ export function PageHeader({ eyebrow, title, subtitle, breadcrumbs = [], childre
       <div className="shell">
         {breadcrumbs.length > 0 ? (
           <nav aria-label="Breadcrumb" className="mb-8">
-            <ol className="flex flex-wrap items-center gap-1.5 text-[0.6875rem] uppercase tracking-label text-muted-foreground">
+            <ol className="flex flex-wrap items-center gap-1.5 text-label uppercase tracking-label text-muted-foreground">
               <li>
                 <Link to="/" className="transition-colors duration-300 hover:text-crimson">
                   Home

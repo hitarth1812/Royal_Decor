@@ -13,7 +13,7 @@ function Stat({ value, suffix, label, decimals = 0, index }) {
         {decimals ? current.toFixed(decimals) : Math.round(current)}
         <span className="text-crimson">{suffix}</span>
       </p>
-      <p className="mt-4 text-[0.6875rem] uppercase tracking-label text-ivory/55">{label}</p>
+      <p className="mt-4 text-label uppercase tracking-label text-ivory/55">{label}</p>
     </div>
   );
 }

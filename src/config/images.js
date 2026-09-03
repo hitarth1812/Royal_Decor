@@ -6,14 +6,20 @@
  *  be re-shot without touching a single component.
  *
  *  These are Royal Decor's own photographs, taken from the showroom's
- *  business listing gallery and re-encoded as WebP. Each one ships in
- *  two widths — `name.webp` (1600px) and `name-800.webp` — and
- *  `imgSrcSet()` offers both so phones never download the large file.
+ *  business listing gallery and re-encoded as WebP. Each one ships at
+ *  full size plus `-800` and `-1200` companions, and `imgSrcSet()`
+ *  offers whichever of those actually exist so a phone never downloads
+ *  the large file.
  *
  *  To replace a photo: drop the new file in /public/images/… (ideally
- *  with an -800 variant beside it) and change the path below.
+ *  with -800 and -1200 variants beside it) and change the path below.
+ *  Widths come from `imageManifest.json`, regenerated on every build —
+ *  so a new photo with no companions still works, it just serves one
+ *  size until the smaller variants are added.
  * ------------------------------------------------------------------
  */
+
+import manifest from '@/config/imageManifest.json';
 
 const REMOTE_BASE = 'https://images.unsplash.com/';
 
@@ -30,19 +36,36 @@ export function img(src, width = 1200, quality = 72) {
 
 /**
  * Builds a responsive srcset.
- * Local images use the `-800` companion file; remote ids use the
- * CDN's width parameter.
+ *
+ * Local images advertise each companion at its true measured width, so
+ * the browser can pick the smallest file that still covers the slot.
+ * A variant is only listed if it exists on disk — and never if it is
+ * as wide as the original, which would just be a bigger download for
+ * the same pixels. Remote ids use the CDN's width parameter.
  */
 export function imgSrcSet(src, widths = [480, 768, 1024, 1440, 1920]) {
   if (!src || src.startsWith('data:')) return undefined;
 
   if (src.startsWith('/')) {
-    // Local files ship a -800 companion beside the full-res original,
-    // whatever the extension — most are .webp, the wallpaper cover is .jpg.
     const match = src.match(/\.(webp|jpe?g|png)$/);
     if (!match) return undefined;
-    const small = src.slice(0, -match[0].length) + '-800' + match[0];
-    return `${small} 800w, ${src} 1600w`;
+
+    const fullWidth = manifest[src];
+    if (!fullWidth) return undefined;
+
+    const stem = src.slice(0, -match[0].length);
+    const candidates = [];
+
+    for (const step of [800, 1200]) {
+      const variant = `${stem}-${step}${match[0]}`;
+      const variantWidth = manifest[variant];
+      if (variantWidth && variantWidth < fullWidth) {
+        candidates.push(`${variant} ${variantWidth}w`);
+      }
+    }
+
+    candidates.push(`${src} ${fullWidth}w`);
+    return candidates.length > 1 ? candidates.join(', ') : undefined;
   }
 
   if (src.startsWith('http')) return undefined;
@@ -75,9 +98,7 @@ export const images = {
   // Category tiles.
   categoryCurtains: '/images/products/curtains-pleated.webp',
   categoryBlinds: '/images/showroom/blinds-display.webp',
-  // The wallpaper cover ships as JPEG rather than WebP — it is reused
-  // as the Open Graph preview image, where JPEG has the widest support.
-  categoryWallpaper: '/images/products/wallpaper-cover.jpg',
+  categoryWallpaper: '/images/products/wallpaper-cover.webp',
   categoryFlooring: '/images/products/flooring-rug-cover.webp',
   categoryBedding: '/images/products/mattress-quilted.webp',
   categorySofas: '/images/rooms/sofa-cream-pair.webp',
@@ -88,7 +109,7 @@ export const images = {
     '/images/products/wallpaper-forest.webp',
     '/images/products/flooring-swatches.webp',
     '/images/rooms/living-carpet.webp',
-    '/images/products/wallpaper-cover.jpg',
+    '/images/products/wallpaper-cover.webp',
     '/images/products/turf-pattern.webp',
   ],
 };

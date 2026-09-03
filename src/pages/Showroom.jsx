@@ -62,7 +62,7 @@ export default function Showroom() {
                       <MapPin className="size-5" strokeWidth={1.5} />
                     </span>
                     <div>
-                      <h3 className="text-[0.625rem] uppercase tracking-label text-muted-foreground">
+                      <h3 className="label-xs uppercase tracking-label text-muted-foreground">
                         Address
                       </h3>
                       <p className="mt-2 text-base leading-relaxed text-navy">
@@ -92,7 +92,7 @@ export default function Showroom() {
                       <Clock className="size-5" strokeWidth={1.5} />
                     </span>
                     <div className="flex-1">
-                      <h3 className="text-[0.625rem] uppercase tracking-label text-muted-foreground">
+                      <h3 className="label-xs uppercase tracking-label text-muted-foreground">
                         Opening hours
                       </h3>
                       <ul className="mt-3 max-w-sm space-y-2.5">
@@ -116,7 +116,7 @@ export default function Showroom() {
                       <Phone className="size-5" strokeWidth={1.5} />
                     </span>
                     <div>
-                      <h3 className="text-[0.625rem] uppercase tracking-label text-muted-foreground">
+                      <h3 className="label-xs uppercase tracking-label text-muted-foreground">
                         Talk to us
                       </h3>
                       <div className="mt-3 flex flex-col gap-2 text-sm">

@@ -53,7 +53,7 @@ export function Footer() {
 
           {/* ---- Pages ---- */}
           <nav aria-label="Footer">
-            <h2 className="text-[0.625rem] uppercase tracking-label text-ivory/40">Navigate</h2>
+            <h2 className="label-xs uppercase tracking-label text-ivory/40">Navigate</h2>
             <ul className="mt-6 space-y-3">
               {pageLinks.map((link) => (
                 <li key={link.to}>
@@ -70,7 +70,7 @@ export function Footer() {
 
           {/* ---- Categories ---- */}
           <nav aria-label="Collections">
-            <h2 className="text-[0.625rem] uppercase tracking-label text-ivory/40">Collections</h2>
+            <h2 className="label-xs uppercase tracking-label text-ivory/40">Collections</h2>
             <ul className="mt-6 space-y-3">
               {categories.map((category) => (
                 <li key={category.id}>
@@ -87,7 +87,7 @@ export function Footer() {
 
           {/* ---- Contact ---- */}
           <div>
-            <h2 className="text-[0.625rem] uppercase tracking-label text-ivory/40">Visit &amp; contact</h2>
+            <h2 className="label-xs uppercase tracking-label text-ivory/40">Visit &amp; contact</h2>
 
             <ul className="mt-6 space-y-4 text-sm text-ivory/70">
               <li>
@@ -130,7 +130,7 @@ export function Footer() {
               </li>
             </ul>
 
-            <h2 className="mt-8 text-[0.625rem] uppercase tracking-label text-ivory/40">Opening hours</h2>
+            <h2 className="mt-8 label-xs uppercase tracking-label text-ivory/40">Opening hours</h2>
             <ul className="mt-4 space-y-2 text-sm text-ivory/55">
               {siteConfig.OPENING_HOURS.map((entry) => (
                 <li key={entry.days} className="flex justify-between gap-4">

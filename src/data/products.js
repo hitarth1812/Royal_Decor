@@ -167,7 +167,7 @@ export const products = [
       'A hand-illustrated Pichwai-style panel — a cow and calf, garlanded, standing among lotus flowers and banana leaves — set into an arched niche with a timber veneer surround and a continuous LED edge light. Built to your wall and finished on site.',
     images: [
       '/images/products/wallpaper-pichwai-cow.webp',
-      '/images/products/wallpaper-cover.jpg',
+      '/images/products/wallpaper-cover.webp',
       '/images/products/wallpaper-peacock.webp',
     ],
     material: 'Non-woven textured printed wallpaper, timber veneer surround, LED edge lighting',
@@ -238,7 +238,7 @@ export const products = [
     description:
       'A full-wall mural of Radha and Krishna on a flower-hung swing, painted in a traditional garden setting with peacocks, doves and a cow at the water’s edge. Printed to your exact wall and typically framed with a border of artificial greenery, as shown, for pooja rooms, entrance lobbies and dining walls.',
     images: [
-      '/images/products/wallpaper-cover.jpg',
+      '/images/products/wallpaper-cover.webp',
       '/images/products/wallpaper-peacock.webp',
       '/images/products/wallpaper-floral.webp',
     ],

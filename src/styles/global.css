@@ -95,6 +95,21 @@
     @apply text-label font-medium uppercase tracking-label text-muted-foreground;
   }
 
+  /* --- Micro label (spec keys, product codes, card badges) ---
+     10px reads fine on a desktop monitor but is under the 12px floor
+     most mobile guidelines set, and these labels carry real
+     information — product codes, phone types, opening hours. Bumped
+     on small screens only, so the desktop composition is untouched. */
+  .label-xs {
+    font-size: 0.75rem;
+  }
+
+  @screen sm {
+    .label-xs {
+      font-size: 0.625rem;
+    }
+  }
+
   /* --- Section rhythm --- */
   .section {
     @apply py-20 md:py-28 lg:py-36;
@@ -231,6 +246,20 @@
   .mask-fade-r {
     -webkit-mask-image: linear-gradient(to right, #000 88%, transparent 100%);
     mask-image: linear-gradient(to right, #000 88%, transparent 100%);
+  }
+}
+
+/* --- Small screens: lift the 11px label tier to 12px -------------
+   `text-label` is the site's signature small-caps tier — eyebrows,
+   stat captions, breadcrumbs. At 11px it sits under the floor most
+   mobile guidance sets, and letter-spacing makes it harder again on a
+   phone. Unlayered so it wins over the Tailwind utility, and capped at
+   the sm breakpoint so the desktop composition is untouched. */
+@media (max-width: 639px) {
+  .text-label,
+  .eyebrow,
+  .eyebrow-muted {
+    font-size: 0.75rem;
   }
 }
 

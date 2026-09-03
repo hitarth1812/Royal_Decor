@@ -86,7 +86,7 @@ export default function Contact() {
                           strokeWidth={1.5}
                         />
                         <div>
-                          <p className="text-[0.625rem] uppercase tracking-label text-muted-foreground">
+                          <p className="label-xs uppercase tracking-label text-muted-foreground">
                             {channel.label}
                           </p>
                           <p className="mt-1.5 text-sm leading-relaxed text-navy">

@@ -158,7 +158,7 @@ export function Navbar() {
                             )
                           }
                         >
-                          <span className="font-sans text-[0.6rem] tracking-label text-ivory/40">
+                          <span className="font-sans label-xs tracking-label text-ivory/40">
                             0{i + 1}
                           </span>
                           {link.label}

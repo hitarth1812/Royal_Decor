@@ -41,7 +41,7 @@ export function CategoryCard({ category, className, size = 'default' }) {
           <span className="font-display text-xs font-medium tracking-label text-ivory/70">
             {category.number}
           </span>
-          <span className="rounded-full border border-white/25 px-3 py-1 text-[0.6rem] uppercase tracking-label text-ivory/80">
+          <span className="rounded-full border border-white/25 px-3 py-1 label-xs uppercase tracking-label text-ivory/80">
             {countByCategory(category.name)} ranges
           </span>
         </div>
@@ -56,7 +56,7 @@ export function CategoryCard({ category, className, size = 'default' }) {
             {category.description}
           </p>
 
-          <span className="mt-5 inline-flex items-center gap-2 text-[0.6875rem] uppercase tracking-label text-ivory">
+          <span className="mt-5 inline-flex items-center gap-2 text-label uppercase tracking-label text-ivory">
             <span className="flex size-9 items-center justify-center rounded-full border border-white/30 transition-colors duration-500 ease-premium group-hover:border-crimson group-hover:bg-crimson">
               <ArrowUpRight className="size-4 transition-transform duration-500 ease-premium group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </span>

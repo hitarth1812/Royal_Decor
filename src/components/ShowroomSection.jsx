@@ -77,7 +77,7 @@ export function ShowroomSection() {
                 const Icon = detail.icon;
                 const body = (
                   <>
-                    <dt className="flex items-center gap-2 text-[0.625rem] uppercase tracking-label text-muted-foreground">
+                    <dt className="flex items-center gap-2 label-xs uppercase tracking-label text-muted-foreground">
                       <Icon className="size-3.5" strokeWidth={1.5} />
                       {detail.label}
                     </dt>

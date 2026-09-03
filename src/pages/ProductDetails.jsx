@@ -97,7 +97,7 @@ export default function ProductDetails() {
         <div className="shell">
           {/* ---- Breadcrumb ---- */}
           <nav aria-label="Breadcrumb" className="mb-10">
-            <ol className="flex flex-wrap items-center gap-2 text-[0.6875rem] uppercase tracking-label text-muted-foreground">
+            <ol className="flex flex-wrap items-center gap-2 text-label uppercase tracking-label text-muted-foreground">
               <li>
                 <Link to="/" className="transition-colors duration-300 hover:text-crimson">
                   Home
@@ -148,7 +148,7 @@ export default function ProductDetails() {
               {/* ---- Price block ---- */}
               <div className="mt-9 flex flex-wrap items-end gap-x-8 gap-y-4 border-y border-navy/10 py-7">
                 <div>
-                  <p className="text-[0.625rem] uppercase tracking-label text-muted-foreground">
+                  <p className="label-xs uppercase tracking-label text-muted-foreground">
                     {product.price == null ? 'Pricing' : 'Showroom price'}
                   </p>
                   <p
@@ -162,7 +162,7 @@ export default function ProductDetails() {
                 </div>
 
                 <div>
-                  <p className="text-[0.625rem] uppercase tracking-label text-muted-foreground">
+                  <p className="label-xs uppercase tracking-label text-muted-foreground">
                     Availability
                   </p>
                   <p className="mt-2 flex items-center gap-2 text-sm text-navy">
@@ -178,7 +178,7 @@ export default function ProductDetails() {
                 </div>
 
                 <div>
-                  <p className="text-[0.625rem] uppercase tracking-label text-muted-foreground">
+                  <p className="label-xs uppercase tracking-label text-muted-foreground">
                     Code
                   </p>
                   <p className="mt-2 text-sm text-navy">{product.productCode}</p>
@@ -187,7 +187,7 @@ export default function ProductDetails() {
 
               {/* ---- Finishes ---- */}
               <div className="mt-8">
-                <p className="text-[0.625rem] uppercase tracking-label text-muted-foreground">
+                <p className="label-xs uppercase tracking-label text-muted-foreground">
                   Available finishes
                 </p>
                 <ul className="mt-3.5 flex flex-wrap gap-2">
@@ -263,7 +263,7 @@ export default function ProductDetails() {
                     <dl className="divide-y divide-navy/8">
                       {specs.map((spec) => (
                         <div key={spec.label} className="flex gap-6 py-3.5">
-                          <dt className="w-32 shrink-0 text-[0.625rem] uppercase tracking-label text-muted-foreground">
+                          <dt className="w-32 shrink-0 label-xs uppercase tracking-label text-muted-foreground">
                             {spec.label}
                           </dt>
                           <dd className="text-sm text-navy">{spec.value}</dd>

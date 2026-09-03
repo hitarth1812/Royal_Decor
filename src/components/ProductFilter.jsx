@@ -27,7 +27,7 @@ import { formatPrice } from '@/config/siteConfig';
 function FilterSelect({ label, value, onChange, options, allLabel = 'All' }) {
   return (
     <div className="space-y-2.5">
-      <Label className="text-[0.625rem] uppercase tracking-label text-muted-foreground">
+      <Label className="label-xs uppercase tracking-label text-muted-foreground">
         {label}
       </Label>
       <Select value={value} onValueChange={onChange}>
@@ -65,7 +65,7 @@ function FilterFields({ filters, setFilter }) {
           product in products.js gets a price, this appears. */}
       <div className={cn('space-y-4', !hasPrices && 'hidden')}>
         <div className="flex items-baseline justify-between">
-          <Label className="text-[0.625rem] uppercase tracking-label text-muted-foreground">
+          <Label className="label-xs uppercase tracking-label text-muted-foreground">
             Price range
           </Label>
           <span className="font-display text-xs font-medium text-navy">
@@ -168,7 +168,7 @@ export function ProductFilterSheet({ filters, setFilter, reset, activeCount, res
 export function ProductSort({ value, onChange }) {
   return (
     <div className="flex items-center gap-3">
-      <span className="hidden text-[0.625rem] uppercase tracking-label text-muted-foreground sm:block">
+      <span className="hidden label-xs uppercase tracking-label text-muted-foreground sm:block">
         Sort
       </span>
       <Select value={value} onValueChange={onChange}>

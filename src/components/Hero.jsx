@@ -146,7 +146,7 @@ export function Hero() {
                   <MapPin className="size-4" />
                 </span>
                 <span>
-                  <span className="block text-[0.6rem] uppercase tracking-label text-crimson">
+                  <span className="block label-xs uppercase tracking-label text-crimson">
                     Visit the showroom
                   </span>
                   <span className="mt-0.5 block font-display text-sm font-semibold text-navy">
@@ -180,7 +180,7 @@ export function Hero() {
           <span className="flex size-10 items-center justify-center rounded-full border border-navy/15">
             <ArrowDown className="size-4 text-navy/60" />
           </span>
-          <span className="text-[0.6875rem] uppercase tracking-label text-muted-foreground">
+          <span className="text-label uppercase tracking-label text-muted-foreground">
             Scroll to explore
           </span>
         </div>

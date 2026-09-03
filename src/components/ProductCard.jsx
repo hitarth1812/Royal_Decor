@@ -69,7 +69,7 @@ export function ProductCard({ product, size = 'default', className, priority = f
 
         {/* ---- Card meta ---- */}
         <div className="flex flex-1 flex-col px-1 pt-5">
-          <p className="text-[0.625rem] uppercase tracking-label text-muted-foreground">
+          <p className="label-xs uppercase tracking-label text-muted-foreground">
             {product.category} / {product.collection} Collection
           </p>
 
@@ -91,12 +91,12 @@ export function ProductCard({ product, size = 'default', className, priority = f
               >
                 {formatPrice(product.price)}
               </p>
-              <p className="mt-1 text-[0.625rem] uppercase tracking-label text-navy/35">
+              <p className="mt-1 label-xs uppercase tracking-label text-navy/35">
                 {product.productCode}
               </p>
             </div>
 
-            <span className="flex items-center gap-1.5 text-[0.6875rem] uppercase tracking-label text-navy transition-colors duration-300 group-hover:text-crimson">
+            <span className="flex items-center gap-1.5 text-label uppercase tracking-label text-navy transition-colors duration-300 group-hover:text-crimson">
               View
               <ArrowUpRight className="size-3.5 transition-transform duration-500 ease-premium group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </span>
