@@ -28,39 +28,34 @@ export const siteConfig = {
   SHOWROOM_TAGLINE: 'Exclusive Home Furnishing & Decor, Surat',
   SHOWROOM_DESCRIPTION:
     'A home furnishing and decor showroom on Rander Road, Tadwadi — curtains, blinds, wallpapers, carpets, mattresses and flooring, chosen for people who care how a space feels, not just how it looks.',
-  ESTABLISHED_YEAR: 2007,
+  ESTABLISHED_YEAR: 2012,
   CITY: 'Surat',
 
   // --- Contact -----------------------------------------------------
-  // Primary number: used by every one-tap Call button and WhatsApp.
-  PHONE: '+91 98242 35959',
-  PHONE_RAW: '+919824235959',
+  // Primary number: drives every one-tap Call button.
+  PHONE: '+91 98254 51533',
+  PHONE_RAW: '+919825451533',
 
-  // Secondary and tertiary numbers: listed alongside the primary in the
-  // footer, contact page and showroom page. The tertiary is the number
-  // published on the Google Business listing.
-  PHONE_SECONDARY: '+91 98254 51533',
-  PHONE_SECONDARY_RAW: '+919825451533',
+  // Secondary number: listed alongside the primary in the footer,
+  // contact page and showroom page. Also the WhatsApp number.
+  PHONE_SECONDARY: '+91 93277 35959',
+  PHONE_SECONDARY_RAW: '+919327735959',
 
-  PHONE_TERTIARY: '+91 93277 35959',
-  PHONE_TERTIARY_RAW: '+919327735959',
+  WHATSAPP: '919327735959', // international format, digits only
 
-  WHATSAPP: '919824235959', // international format, digits only
-
-  // NEEDS CONFIRMATION: no public email address was listed.
-  EMAIL: 'royaldecor.surat@gmail.com',
+  EMAIL: 'hiral.j.khatiwala@gmail.com',
 
   // --- Location ----------------------------------------------------
-  ADDRESS_LINE_1: 'Bejanwala Complex, Rander Road, Tadwadi',
+  ADDRESS_LINE_1: 'Tadwadi Main Road, Rander Road',
   ADDRESS_LINE_2: 'Surat, Gujarat 395009',
-  ADDRESS_LANDMARK: 'Opposite Vijay Sales & SMC, near Monginis Cake, by the BRTS bus stand',
+  ADDRESS_LANDMARK: 'Opposite SMC West Zone Office & BRTS bus stand, opp. Vijay Sales, near Monginis Cake',
   ADDRESS_FULL:
-    'Bejanwala Complex, Main Road, Rander Road, opp. Vijay Sales & SMC, near Monginis Cake, Tadwadi, Surat, Gujarat 395009',
+    'Opp. SMC West Zone Office, BRTS bus stand, Tadwadi Main Road, Rander Road, opp. Vijay Sales, near Monginis Cake, Tadwadi, Surat, Gujarat 395009',
 
   GOOGLE_MAPS_URL:
-    'https://www.google.com/maps/search/?api=1&query=Royal+Decor+Bejanwala+Complex+Rander+Road+Tadwadi+Surat',
+    'https://www.google.com/maps/search/?api=1&query=Royal+Decor+Tadwadi+Main+Road+Rander+Road+Surat',
   GOOGLE_MAPS_EMBED_URL:
-    'https://www.google.com/maps?q=Royal+Decor+Bejanwala+Complex+Rander+Road+Tadwadi+Surat+395009&output=embed',
+    'https://www.google.com/maps?q=Royal+Decor+Tadwadi+Main+Road+Rander+Road+Surat+395009&output=embed',
 
   // --- Reputation --------------------------------------------------
   GOOGLE_RATING: 4.4,
@@ -70,13 +65,12 @@ export const siteConfig = {
 
   // --- Hours -------------------------------------------------------
   // Sunday (09:00 — 12:30) and the Monday 09:00 opening are from the
-  // Google listing. NEEDS CONFIRMATION: the weekday closing time is
-  // not published anywhere — 21:00 is an assumption.
+  // Google listing.
   OPENING_HOURS: [
-    { days: 'Monday — Saturday', hours: '09:00 — 21:00' },
+    { days: 'Monday — Saturday', hours: '09:00 — 20:30' },
     { days: 'Sunday', hours: '09:00 — 12:30' },
   ],
-  OPENING_HOURS_SHORT: 'Mon — Sat, 9:00 to 21:00 · Sun till 12:30',
+  OPENING_HOURS_SHORT: 'Mon — Sat, 9:00 to 20:30 · Sun till 12:30',
 
   // --- Social ------------------------------------------------------
   INSTAGRAM_URL: 'https://www.instagram.com/royaldecor.surat/',
@@ -126,7 +120,6 @@ export function generalWhatsappLink() {
 
 export const telLink = `tel:${siteConfig.PHONE_RAW}`;
 export const telLinkSecondary = `tel:${siteConfig.PHONE_SECONDARY_RAW}`;
-export const telLinkTertiary = `tel:${siteConfig.PHONE_TERTIARY_RAW}`;
 export const mailLink = `mailto:${siteConfig.EMAIL}`;
 
 /**
@@ -137,5 +130,4 @@ export const mailLink = `mailto:${siteConfig.EMAIL}`;
 export const phoneNumbers = [
   { label: siteConfig.PHONE, href: telLink, role: 'Phone' },
   { label: siteConfig.PHONE_SECONDARY, href: telLinkSecondary, role: 'Phone (alternate)' },
-  { label: siteConfig.PHONE_TERTIARY, href: telLinkTertiary, role: 'Phone (alternate)' },
 ];

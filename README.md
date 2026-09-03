@@ -30,20 +30,19 @@ Populated with the real Royal Decor details (Home Goods Store, Tadwadi, Surat):
 
 ```js
 SHOWROOM_NAME: 'ROYAL DECOR',
-PHONE_RAW:           '+919824235959',   // primary — every Call button + WhatsApp
-PHONE_SECONDARY_RAW: '+919825451533',   // listed alongside it
-PHONE_TERTIARY_RAW:  '+919327735959',   // the Google Business listing number
-WHATSAPP: '919824235959',               // wa.me — digits only, no +
-ADDRESS_LINE_1: 'Bejanwala Complex, Rander Road, Tadwadi',
+PHONE_RAW:           '+919825451533',   // primary — every Call button
+PHONE_SECONDARY_RAW: '+919327735959',   // listed alongside it, also the WhatsApp number
+WHATSAPP: '919327735959',               // wa.me — digits only, no +
+ADDRESS_LINE_1: 'Tadwadi Main Road, Rander Road',
 ADDRESS_LINE_2: 'Surat, Gujarat 395009',
-ADDRESS_LANDMARK: 'Opposite Vijay Sales & SMC, near Monginis Cake, by the BRTS bus stand',
-ESTABLISHED_YEAR: 2007,
+ADDRESS_LANDMARK: 'Opposite SMC West Zone Office & BRTS bus stand, opp. Vijay Sales, near Monginis Cake',
+ESTABLISHED_YEAR: 2012,
 GOOGLE_RATING: 4.4,  GOOGLE_REVIEW_COUNT: 47,
 INSTAGRAM_URL: 'https://www.instagram.com/royaldecor.surat/',
 ```
 
-The primary number drives every one-tap Call button and all WhatsApp enquiries.
-All three appear together in the footer, the contact page and the showroom page,
+The primary number drives every one-tap Call button; the secondary number drives WhatsApp enquiries.
+Both appear together in the footer, the contact page and the showroom page,
 rendered from the `phoneNumbers` array at the bottom of the file — add, reorder
 or remove an entry there and all three pages follow.
 
@@ -54,8 +53,6 @@ Search `NEEDS CONFIRMATION` in `siteConfig.js`. As of the last update:
 | Value | Status |
 | ----- | ------ |
 | `SITE_URL` | placeholder domain — set before deploying (drives canonical URLs + sitemap) |
-| `EMAIL` | no public address was listed; currently a guess |
-| Weekday closing time | Google publishes only "opens 9 am"; `21:00` is an assumption |
 | `FACEBOOK_URL` | no page found — remove the icon or add the real link |
 | `stats` middle two figures | "500+ products" / "12+ ranges" in `src/data/content.js` are placeholders |
 | `testimonials` | placeholder quotes, **not real customers** — replace with real Google reviews |

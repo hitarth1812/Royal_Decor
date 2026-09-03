@@ -95,7 +95,7 @@ export const testimonials = [
 ];
 
 export const storyMilestones = [
-  { year: '2007', title: 'The first shop', text: 'Opened on Tadwadi Main Road with a single room of curtain fabric and one delivery van.' },
+  { year: '2012', title: 'The first shop', text: 'Opened on Tadwadi Main Road with a single room of curtain fabric and one delivery van.' },
   { year: '2014', title: 'Beyond fabric', text: 'Added wallpapers, wooden flooring and carpets, and began fitting as well as supplying.' },
   { year: '2019', title: 'The design desk', text: 'Added in-house interior consultation so clients could plan whole rooms, not buy single items.' },
   { year: '2026', title: 'The showroom today', text: 'A full home-furnishing floor on Rander Road, arranged as rooms rather than aisles.' },
