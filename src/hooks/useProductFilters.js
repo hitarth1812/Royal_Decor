@@ -18,8 +18,6 @@ export const sortOptions = [
 export const defaultFilters = {
   search: '',
   category: 'All',
-  collection: 'All',
-  availability: 'All',
   price: [priceBounds.min, priceBounds.max],
   sort: 'featured',
 };
@@ -56,8 +54,6 @@ export function useProductFilters(initial = {}) {
       }
 
       if (filters.category !== 'All' && product.category !== filters.category) return false;
-      if (filters.collection !== 'All' && product.collection !== filters.collection) return false;
-      if (filters.availability !== 'All' && product.availability !== filters.availability) return false;
 
       // Unpriced pieces stay visible unless the max has been pulled down.
       const [min, max] = filters.price;
@@ -97,8 +93,6 @@ export function useProductFilters(initial = {}) {
     let count = 0;
     if (filters.search.trim()) count += 1;
     if (filters.category !== 'All') count += 1;
-    if (filters.collection !== 'All') count += 1;
-    if (filters.availability !== 'All') count += 1;
     if (filters.price[0] !== priceBounds.min || filters.price[1] !== priceBounds.max) count += 1;
     return count;
   }, [filters]);

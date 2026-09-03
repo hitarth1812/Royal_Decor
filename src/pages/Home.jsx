@@ -7,6 +7,7 @@ import { StatsSection } from '@/components/StatsSection';
 import { NewArrivals } from '@/components/NewArrivals';
 import { WhyChooseUs } from '@/components/WhyChooseUs';
 import { ShowroomSection } from '@/components/ShowroomSection';
+import { BrandsSection } from '@/components/BrandsSection';
 import { TestimonialCarousel } from '@/components/Testimonials';
 import { InstagramGrid } from '@/components/InstagramGrid';
 import { CTASection } from '@/components/CTASection';
@@ -27,6 +28,7 @@ export default function Home() {
       <StatsSection />
       <NewArrivals />
       <ShowroomSection />
+      <BrandsSection />
       <WhyChooseUs />
       <TestimonialCarousel />
       <InstagramGrid />

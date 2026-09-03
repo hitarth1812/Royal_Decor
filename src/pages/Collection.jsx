@@ -16,7 +16,7 @@ export default function Collection() {
     <>
       <Seo
         title="Collection"
-        description="Six rooms and twelve collections — browse the showroom by category, or explore a single collection from end to end."
+        description="Six rooms and nine collections — browse the showroom by category, or explore a single collection from end to end."
       />
 
       <PageHeader

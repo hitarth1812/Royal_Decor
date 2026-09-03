@@ -19,6 +19,7 @@ export function SectionHeading({
   light = false,
   align = 'between',
   className,
+  headingId,
 }) {
   return (
     <div
@@ -47,6 +48,7 @@ export function SectionHeading({
         ) : null}
 
         <h2
+          id={headingId}
           className={cn(
             'mt-5 text-section font-light',
             light ? 'text-ivory' : 'text-navy'

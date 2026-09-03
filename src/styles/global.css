@@ -191,6 +191,29 @@
     @apply snap-start shrink-0;
   }
 
+  /* --- Brand wall tile: settles into place once, then stays still ---
+     A one-shot reveal (opacity + rise + scale + blur), kept on the
+     `animation` track rather than `transition` so it never fights
+     with the tile's own hover transition on the same property. */
+  .brand-tile {
+    opacity: 0;
+    transform: translateY(26px) scale(0.96);
+    filter: blur(6px);
+  }
+
+  .brand-tile.is-visible {
+    animation: brand-tile-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: var(--reveal-delay, 0ms);
+  }
+
+  @keyframes brand-tile-in {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
+
   /* --- Grain overlay for dark cinematic sections --- */
   .grain::after {
     content: '';
@@ -227,6 +250,12 @@
   .reveal {
     opacity: 1 !important;
     transform: none !important;
+  }
+
+  .brand-tile {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
   }
 
   .line-mask > span {

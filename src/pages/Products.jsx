@@ -32,7 +32,7 @@ export default function Products() {
     <>
       <Seo
         title="Products"
-        description={`Browse all ${products.length} pieces in the showroom — search by name, filter by category, collection, price and availability.`}
+        description={`Browse all ${products.length} pieces in the showroom — search by name and filter by category.`}
       />
 
       <PageHeader
@@ -67,12 +67,6 @@ export default function Products() {
             <div className="mt-6 flex flex-wrap items-center gap-2">
               {filters.category !== 'All' ? (
                 <Badge variant="soft">{filters.category}</Badge>
-              ) : null}
-              {filters.collection !== 'All' ? (
-                <Badge variant="soft">{filters.collection} Collection</Badge>
-              ) : null}
-              {filters.availability !== 'All' ? (
-                <Badge variant="soft">{filters.availability}</Badge>
               ) : null}
               <button
                 type="button"

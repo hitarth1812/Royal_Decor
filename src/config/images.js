@@ -78,7 +78,7 @@ export const images = {
   categoryWallpaper: '/images/products/wallpaper-cover.jpg',
   categoryFlooring: '/images/products/flooring-rug-cover.webp',
   categoryBedding: '/images/products/mattress-quilted.webp',
-  categoryUpholstery: '/images/rooms/sofa-tan.webp',
+  categorySofas: '/images/rooms/sofa-cream-pair.webp',
 
   // Social grid — a mix of installed work and showroom stock.
   social: [

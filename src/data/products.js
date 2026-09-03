@@ -27,9 +27,10 @@ export const products = [
     description:
       'Full-length pinch-pleat curtains in a heavy weave, lined for blackout. Made to the exact drop of your window and hung on a concealed track or a visible rod, whichever suits the room. Bring your measurements, or we will come and take them.',
     images: [
+      '/images/products/curtains-pleated-wall.webp',
       '/images/products/curtains-pleated.webp',
-      '/images/showroom/curtain-display.webp',
       '/images/rooms/living-curtains.webp',
+      '/images/showroom/curtain-display.webp',
     ],
     material: 'Heavy polyester-cotton weave, blackout lining',
     dimensions: 'Made to measure — any width and drop',
@@ -51,9 +52,7 @@ export const products = [
     description:
       'Sheers keep daylight and privacy at the same time. Most rooms take them as the inner layer behind a blackout curtain on a double track, so you can have the room bright and private through the day and dark at night.',
     images: [
-      '/images/products/curtains-sheer.webp',
-      '/images/products/curtains-teal.webp',
-      '/images/showroom/curtain-racks.webp',
+      '/images/products/curtains-sheer-display.webp',
     ],
     material: 'Polyester voile and linen-look sheer',
     dimensions: 'Made to measure — any width and drop',
@@ -75,8 +74,7 @@ export const products = [
     description:
       'Clean, versatile window coverings available in motorized, sunscreen, blackout, and custom digital printed options (including themed architectural and artwork prints).',
     images: [
-      '/images/products/blinds-roller.webp',
-      '/images/showroom/fabric-rail.webp',
+      '/images/showroom/blinds-display.webp',
       '/images/showroom/wallpaper-rolls.webp',
     ],
     material: 'Sunscreen, blackout and printed polyester fabric',
@@ -99,9 +97,7 @@ export const products = [
     description:
       'A roman blind gives you the softness of a curtain with the tidiness of a blind, which is why they suit windows where a full drape would crowd the room. Made in the same fabrics as our curtains, so a room can be matched throughout.',
     images: [
-      '/images/products/blinds-roman.webp',
-      '/images/showroom/fabric-hanging.webp',
-      '/images/showroom/curtain-racks.webp',
+      '/images/showroom/blinds-display.webp',
     ],
     material: 'Curtain-weight fabric, corded fold mechanism',
     dimensions: 'Made to measure — any width and drop',
@@ -124,8 +120,7 @@ export const products = [
       'Horizontal timber slats on a tilt cord, so you control how much light enters without losing the window entirely. Warmer than aluminium and better suited to living rooms and studies.',
     images: [
       '/images/products/blinds-wooden.webp',
-      '/images/showroom/fabric-rail.webp',
-      '/images/showroom/shelves.webp',
+      '/images/showroom/fabric-aisle.webp',
     ],
     material: 'Basswood slats, cord tilt and lift',
     dimensions: 'Made to measure — 25mm and 50mm slats',
@@ -291,7 +286,6 @@ export const products = [
     description:
       'Sold by the roll rather than printed to size. The raised texture catches light across the day, which makes a plain wall considerably less plain without introducing a pattern that will date.',
     images: [
-      '/images/products/wallpaper-stone.webp',
       '/images/products/wall-panel-mixed.webp',
       '/images/showroom/wallpaper-rolls.webp',
     ],
@@ -460,9 +454,8 @@ export const products = [
     description:
       'Built to your bed size and upholstered in a fabric you choose from the showroom. The headboard can be plain, channelled or button-tufted, and can run wider than the bed to fill the wall.',
     images: [
-      '/images/products/bed-tufted.webp',
+      '/images/products/bed-velvet-navy.webp',
       '/images/products/headboard-checkered.webp',
-      '/images/products/headboard-hex.webp',
     ],
     material: 'Engineered frame, foam and fabric upholstery',
     dimensions: 'Single, Double, Queen and King',
@@ -508,9 +501,8 @@ export const products = [
     description:
       'A wall treatment rather than a piece of furniture — hexagonal or checkerboard upholstered panels built to the width of the wall, so the bed reads as part of the room rather than a piece dropped into it.',
     images: [
-      '/images/products/headboard-hex.webp',
-      '/images/products/wall-panel-mixed.webp',
       '/images/rooms/bedroom-flamingo.webp',
+      '/images/products/bed-flamingo-close.webp',
     ],
     material: 'Upholstered panels, laminate trim, LED profile',
     dimensions: 'Built to your wall',
@@ -532,9 +524,7 @@ export const products = [
     description:
       'The part of the shop you can walk out with the same day. Sheet sets, dohars, quilts and mattress protectors in every standard size, stacked so you can feel the cotton before you buy it.',
     images: [
-      '/images/showroom/bedding-stacks.webp',
       '/images/showroom/bedding-display.webp',
-      '/images/showroom/shelves.webp',
     ],
     material: 'Cotton and cotton-blend',
     dimensions: 'Single, Double, Queen, King',
@@ -548,7 +538,7 @@ export const products = [
     id: 17,
     slug: 'cushions-and-covers',
     name: 'Cushions & Covers',
-    category: 'Furnishings',
+    category: 'Bedding',
     collection: 'Home Linen',
     price: null,
     productCode: 'FN-001',
@@ -572,7 +562,7 @@ export const products = [
     id: 18,
     slug: 'sofa-upholstery-service',
     name: 'Sofa Upholstery & Re-covering',
-    category: 'Furnishings',
+    category: 'Sofas',
     collection: 'Services',
     price: null,
     productCode: 'FN-002',
@@ -580,7 +570,6 @@ export const products = [
     description:
       'A well-built frame outlasts its fabric by decades. We strip, re-foam where needed and re-cover in a fabric from the showroom — from textured boucle to woven chenille — usually for a fraction of what a new sofa costs.',
     images: [
-      '/images/rooms/sofa-tan.webp',
       '/images/products/sofa-corner.webp',
       '/images/rooms/sofa-olive.webp',
     ],
@@ -596,7 +585,7 @@ export const products = [
     id: 19,
     slug: 'wall-panelling',
     name: 'Decorative Wall Panelling',
-    category: 'Furnishings',
+    category: 'Bedding',
     collection: 'Wallcoverings',
     price: null,
     productCode: 'FN-003',
@@ -620,7 +609,7 @@ export const products = [
     id: 20,
     slug: 'mosquito-nets-and-screens',
     name: 'Mosquito Nets & Window Screens',
-    category: 'Furnishings',
+    category: 'Bedding',
     collection: 'Window Blinds',
     price: null,
     productCode: 'FN-004',
@@ -628,7 +617,6 @@ export const products = [
     description:
       'Pleated and roll-up insect screens fitted into the window frame, so the window still opens and closes normally. Practical rather than decorative, and one of the most common things we are asked for.',
     images: [
-      '/images/products/blinds-wooden.webp',
       '/images/showroom/fabric-rail.webp',
       '/images/rooms/living-wide.webp',
     ],
@@ -639,6 +627,53 @@ export const products = [
     featured: false,
     newArrival: false,
     year: 2024,
+  },
+  {
+    id: 27,
+    slug: 'fabric-leather-sofas',
+    name: 'Fabric & Leather Sofas',
+    category: 'Sofas',
+    collection: 'Living Room',
+    price: null,
+    productCode: 'SF-001',
+    shortDescription: 'Straight and curved sofas in fabric, leatherette or leather.',
+    description:
+      'Built frame-up rather than picked off a floor plan — a curved statement piece for a single wall, or a matched pair for a larger room. Upholstered in a fabric or leather from the showroom, so the sofa is finished to the room rather than the other way round.',
+    images: [
+      '/images/rooms/sofa-cream-pair.webp',
+      '/images/rooms/sofa-blue.webp',
+      '/images/rooms/sofa-olive.webp',
+    ],
+    material: 'Hardwood frame, high-density foam, fabric or leather upholstery',
+    dimensions: 'Built to your room — 2, 3 and 4-seater',
+    colors: ['Full fabric and leather library in store'],
+    availability: 'Made to Order',
+    featured: true,
+    newArrival: false,
+    year: 2026,
+  },
+  {
+    id: 28,
+    slug: 'l-shaped-sectional-sofas',
+    name: 'L-Shaped Sectional Sofas',
+    category: 'Sofas',
+    collection: 'Living Room',
+    price: null,
+    productCode: 'SF-002',
+    shortDescription: 'Corner and U-shaped sectionals, built to fill the room.',
+    description:
+      'A single continuous piece rather than a sofa-and-two-chairs — built to turn the corner of the room, with a chaise end where the layout calls for one. Made to the exact footprint of the space, not a standard configuration trimmed to fit.',
+    images: [
+      '/images/rooms/sofa-tan.webp',
+      '/images/products/sofa-corner.webp',
+    ],
+    material: 'Hardwood frame, high-density foam, fabric or leatherette upholstery',
+    dimensions: 'Built to your room — L-shaped and U-shaped',
+    colors: ['Full fabric and leatherette library in store'],
+    availability: 'Made to Order',
+    featured: false,
+    newArrival: true,
+    year: 2025,
   },
 ];
 
@@ -679,23 +714,21 @@ export const categories = [
     id: 'bedding',
     name: 'Bedding',
     number: '05',
-    description: 'Beds, headboards, mattresses and everything that goes on them.',
+    description: 'Beds, headboards, mattresses, cushions and the finishing layer around them.',
     image: 'categoryBedding',
   },
   {
-    id: 'furnishings',
-    name: 'Furnishings',
+    id: 'sofas',
+    name: 'Sofas',
     number: '06',
-    description: 'Cushions, upholstery, panelling and the finishing layer.',
-    image: 'categoryUpholstery',
+    description: 'Fabric, leatherette and leather sofas, straight, corner and custom-built.',
+    image: 'categorySofas',
   },
 ];
 
 export const categoryNames = categories.map((c) => c.name);
 
 export const collections = [...new Set(products.map((p) => p.collection))].sort();
-
-export const availabilityOptions = [...new Set(products.map((p) => p.availability))];
 
 const pricedProducts = products.filter((p) => typeof p.price === 'number');
 

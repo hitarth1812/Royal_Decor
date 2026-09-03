@@ -21,13 +21,7 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { sortOptions } from '@/hooks/useProductFilters';
-import {
-  availabilityOptions,
-  categoryNames,
-  collections,
-  hasPrices,
-  priceBounds,
-} from '@/data/products';
+import { categoryNames, hasPrices, priceBounds } from '@/data/products';
 import { formatPrice } from '@/config/siteConfig';
 
 function FilterSelect({ label, value, onChange, options, allLabel = 'All' }) {
@@ -65,22 +59,6 @@ function FilterFields({ filters, setFilter }) {
         onChange={(v) => setFilter('category', v)}
         options={categoryNames}
         allLabel="All categories"
-      />
-
-      <FilterSelect
-        label="Collection"
-        value={filters.collection}
-        onChange={(v) => setFilter('collection', v)}
-        options={collections}
-        allLabel="All collections"
-      />
-
-      <FilterSelect
-        label="Availability"
-        value={filters.availability}
-        onChange={(v) => setFilter('availability', v)}
-        options={availabilityOptions}
-        allLabel="Any availability"
       />
 
       {/* Hidden while every piece is quoted on enquiry — the moment a
