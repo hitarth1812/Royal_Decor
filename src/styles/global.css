@@ -324,18 +324,33 @@
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
   }
 
+  /* Touch/tablet: no hover to preview with, so every panel shows at
+     full size, full colour and fully labelled — a tap just navigates,
+     there's nothing left for the "active" state to gate here. */
   @media (max-width: 1024px) {
     .accordion-gallery {
       flex-direction: column;
       height: auto !important;
       perspective: none;
     }
+
     .ag-panel {
-      min-height: 96px;
+      min-height: 220px;
+      flex-grow: 1 !important;
       transform: none !important;
     }
-    .ag-panel--active {
-      min-height: 260px;
+
+    .ag-panel__media img {
+      filter: grayscale(0) !important;
+    }
+
+    .ag-panel__overlay {
+      background: linear-gradient(180deg, transparent 45%, rgba(5, 5, 5, 0.78) 100%), rgba(5, 5, 5, 0) !important;
+    }
+
+    .ag-panel__label {
+      opacity: 1 !important;
+      transform: none !important;
     }
   }
 

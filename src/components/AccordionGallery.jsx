@@ -24,12 +24,23 @@ export function AccordionGallery({
   const r = Math.min(Math.max(expandRatio, 0.2), 0.9);
   const grow = count > 1 ? (r * (count - 1)) / (1 - r) : 1;
 
+  // Touch collapses hover+focus+click into one gesture, so the
+  // preview-then-confirm dance below only makes sense on devices that
+  // can actually hover. Everywhere else, a tap just navigates.
+  const canHover = () =>
+    typeof window !== 'undefined' &&
+    window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
   const handleEnter = (i) => {
-    if (trigger === 'hover') setActive(i);
+    if (trigger === 'hover' && canHover()) setActive(i);
+  };
+
+  const handleFocus = (i) => {
+    if (canHover()) setActive(i);
   };
 
   const handleClick = (i, e) => {
-    if (i !== active) {
+    if (canHover() && i !== active) {
       e.preventDefault();
       setActive(i);
     }
@@ -65,7 +76,7 @@ export function AccordionGallery({
             style={{ flexGrow: isActive ? grow : 1, transform: `rotateY(${rot}deg)` }}
             onClick={(e) => handleClick(i, e)}
             onMouseEnter={() => handleEnter(i)}
-            onFocus={() => setActive(i)}
+            onFocus={() => handleFocus(i)}
             onKeyDown={(e) => handleKeyDown(i, e)}
             role="listitem"
             tabIndex={0}
