@@ -47,7 +47,7 @@ export function Seo({ title, description, image, structuredData }) {
     setMeta('property', 'og:title', fullTitle);
     setMeta('property', 'og:description', description);
     setMeta('property', 'og:url', window.location.href);
-    setMeta('property', 'og:image', absoluteUrl(image) ?? absoluteUrl('/images/rooms/hero-cover.webp'));
+    setMeta('property', 'og:image', absoluteUrl(image) ?? absoluteUrl(siteConfig.OG_IMAGE));
     setLink('canonical', window.location.href);
   }, [fullTitle, description, image]);
 

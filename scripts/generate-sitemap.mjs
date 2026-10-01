@@ -45,3 +45,12 @@ ${urls
 
 writeFileSync(resolve(root, 'public/sitemap.xml'), xml, 'utf8');
 console.log(`sitemap.xml — ${urls.length} URLs`);
+
+// robots.txt carries an absolute Sitemap URL, so it has to follow SITE_URL
+// too — a hand-written copy would point crawlers at the wrong domain.
+writeFileSync(
+  resolve(root, 'public/robots.txt'),
+  `User-agent: *\nAllow: /\n\nSitemap: ${base}/sitemap.xml\n`,
+  'utf8'
+);
+console.log(`robots.txt — Sitemap: ${base}/sitemap.xml`);

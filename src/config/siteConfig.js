@@ -14,9 +14,15 @@
 
 export const siteConfig = {
   // --- Deployment --------------------------------------------------
-  // NEEDS CONFIRMATION: set this to the real domain once registered.
-  // Drives canonical URLs and the generated sitemap.
-  SITE_URL: 'https://royaldecor.example.com',
+  // Currently the Vercel-assigned address. If a custom domain is bought
+  // later, change it here and redeploy — but do it before Google has
+  // indexed much, because moving domains discards what it has learned.
+  // Drives canonical URLs, sitemap.xml, robots.txt and the structured
+  // data in index.html (all generated from this value at build time).
+  SITE_URL: 'https://royal-decor-two.vercel.app',
+
+  // Default social-share image, relative to SITE_URL.
+  OG_IMAGE: '/images/rooms/hero-cover.webp',
 
   // --- Brand -------------------------------------------------------
   // Empty = use the supplied logo artwork drawn inline by Logo.jsx.
@@ -48,6 +54,10 @@ export const siteConfig = {
   // --- Location ----------------------------------------------------
   ADDRESS_LINE_1: 'Tadwadi Main Road, Rander Road',
   ADDRESS_LINE_2: 'Surat, Gujarat 395009',
+  // The same address split out for structured data, which needs the
+  // region and postcode as separate fields.
+  REGION: 'Gujarat',
+  POSTAL_CODE: '395009',
   ADDRESS_LANDMARK: 'Opposite SMC West Zone Office & BRTS bus stand, opp. Vijay Sales, near Monginis Cake',
   ADDRESS_FULL:
     'Opp. SMC West Zone Office, BRTS bus stand, Tadwadi Main Road, Rander Road, opp. Vijay Sales, near Monginis Cake, Tadwadi, Surat, Gujarat 395009',

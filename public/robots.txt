@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://royaldecor.example.com/sitemap.xml
+
+Sitemap: https://royal-decor-two.vercel.app/sitemap.xml
